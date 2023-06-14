@@ -19,8 +19,8 @@ export const ContactList = () => {
   const visibleContacts = visibleContactList();
   return (
     <>
-      {isLoading && <Loader />}
       <ul className={css.list}>
+        {isLoading && <Loader />}
         {visibleContacts?.map(contact => (
           <li key={contact.id} className={css.item}>
             {contact.name} - {contact.number}
